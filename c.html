@@ -1,0 +1,69 @@
+<!--HTML作业-->
+<!--使用的时候注意 要把当前html的bootstrap路径改一下-->
+<!DOCTYPE html>
+<html>
+
+    <head>
+<title>Bootstrap计算器</title>
+
+<link rel="stylesheet" href="css/bootstrap-4.min.css">
+
+    </head>
+
+<body>
+    <div class="container">
+    <div class="row">
+
+    <button class="col-sm-offset-4" id="Show" >
+
+
+     </div>
+    </div>
+<div class="container">
+    <div class="row">
+
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='1' onclick='Num(this)'>1</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='2' onclick='Num(this)'>2</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='3' onclick='Num(this)'>3</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='+' onclick='Num(this)'>+</button></div>
+
+    </div>
+    <div class="row">
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='4' onclick='Num(this)'>4</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='5' onclick='Num(this)'>5</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='6' onclick='Num(this)'>6</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='-' onclick='Num(this)'>-</button></div>
+
+    </div>
+     <div class="row">
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='7' onclick='Num(this)'>4</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='8' onclick='Num(this)'>5</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='9' onclick='Num(this)'>6</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"><button class="btn btn-success" id='*' onclick='Num(this)'>*</button></div>
+    </div>
+     <div class="row">
+        <div class = "col-xs-1 col-md-1 col-sm-1"> <button class="col-xs-1 btn btn-success" id='C' onclick='Clear()'>C</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"> <button class="col-xs-1 btn btn-success" id='0' onclick='Num(this)'>0</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"> <button class="col-xs-1 btn btn-danger" id='=' onclick='Eval()'onblur='Clear()'>=</button></div>
+        <div class = "col-xs-1 col-md-1 col-sm-1"> <button class="col-xs-1 btn btn-success" id='/' onclick='Num(this)'>/</button></div>
+    </div>
+
+</div>
+
+       <script type="text/javascript">
+function Num(obj){
+
+    document.getElementById('Show').innerText +=obj.id;
+}
+function Clear(){
+    document.getElementById('Show').innerText=null;
+}
+function Eval(){
+
+    var Evals=document.getElementById('Show').innerText;
+    document.getElementById('Show').innerText=eval(Evals);
+}
+</script>
+    </body>
+
+</html>
